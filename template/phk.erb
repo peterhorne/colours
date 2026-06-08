@@ -6,46 +6,51 @@
         author:      "Peter Horne-Khan",
         email:       "peter@horne-khan.com",
         name:        "phk",
-        description: "Peter Horne Khan's colour scheme",
+        description: "Peter Horne-Khan's colour scheme",
         webpage:     "https://github.com/peterhorne/colours"
     }
 
-    black       = ["#000000", 0, "black"]
-    darkred     = ["#e84033", 1, "darkred"]
+    black       = ["#1e1b21", 0, "black"]
+    darkred     = ["#bd5945", 1, "darkred"]
     darkgreen   = ["#45a569", 2, "darkgreen"]
     darkyellow  = ["#f3b400", 3, "darkyellow"]
     darkblue    = ["#4179cc", 4, "darkblue"]
-    darkmagenta = ["#c13eb9", 5, "darkmagenta"]
+    darkmagenta = ["#766481", 5, "darkmagenta"]
     darkcyan    = ["#57b7c5", 6, "darkcyan"]
     grey        = ["#f4f4f4", 7, "grey"]
-    darkgrey    = ["#a1a1a1", 8, "darkgrey"]
-    red         = ["#ec6554", 9, "red"]
+    darkgrey    = ["#675d4f", 8, "darkgrey"]
+    red         = ["#d17967", 9, "red"]
     green       = ["#74aa74", 10, "green"]
     yellow      = ["#f7d17d", 11, "yellow"]
-    blue        = ["#5189dc", 12, "blue"]
-    magenta     = ["#d350ca", 13, "magenta"]
+    blue        = ["#9aa3bd", 12, "blue"]
+    magenta     = ["#35323d", 13, "magenta"]
     cyan        = ["#6bd5e4", 14, "cyan"]
-    white       = ["#ffffff", 15, "white"]
+    white       = ["#d2c5b4", 15, "white"]
+    #_orange     = ["#ffd5ae", 16, "orange"]
+    #_orange     = ["#e2b293", 16, "orange"]
+    _orange     = ["#c49b81", 16, "orange"]
 
     highlights = [
         # Primary Highlights
-        [ "Normal", white, black, "NONE" ],
+        [ "Normal", black, white, "NONE" ],
         [ "NonText", "NONE", darkgrey, "NONE" ],
-        [ "Comment", "NONE", darkblue, "NONE" ],
-        [ "Error", "NONE", darkred, "NONE" ],
-        [ "DiagnosticUnderlineError", "NONE", "NONE", "underline", darkred ],
-        [ "Todo", "NONE", darkblue, "bold" ],
-        [ "Underlined", "NONE", black, "underline" ],
+        [ "Comment", black, _orange, "NONE" ],
+        [ "Error", "NONE", red, "NONE" ],
+        [ "DiagnosticUnderlineError", "NONE", "NONE", "underline", red ],
+        [ "Todo", magenta, white, "bold" ],
+        [ "Underlined", "NONE", white, "underline" ],
         [ "Visual", yellow, "NONE", "NONE" ],
         [ "WarningMsg", "NONE", darkyellow, "NONE" ],
         [ "IncSearch", yellow, black, "bold" ],
         [ "Search", yellow, black, "NONE" ],
         [ "SpellBad", "NONE", "NONE", "undercurl", red ],
-        [ "MatchParen", white, black, "bold" ], # TODO: come up with something prettier
+        [ "MatchParen", black, white, "bold" ],
         [ "CursorLine", "NONE", "NONE", "NONE" ],
 
         # Made up primary highlights
-        [ "CommentBold", "NONE", darkblue, "bold" ],
+        [ "CommentBold", "NONE", darkmagenta, "bold" ],
+        [ "Module", "NONE", darkmagenta, "NONE" ],
+        [ "Primary", "NONE", blue, "NONE" ],
 
         # Derivative Highlights
         [ "EndOfBuffer", "NonText" ],
@@ -131,10 +136,10 @@
         [ "DiagnosticError", "Error" ],
 
         # Diagnostics
-        [ "DiagnosticError", "NONE", darkred, "NONE" ],
+        [ "DiagnosticError", "NONE", red, "NONE" ],
         [ "DiagnosticWarn", "NONE", darkyellow, "NONE" ],
         [ "DiagnosticInfo", "NONE", darkcyan, "NONE" ],
-        [ "DiagnosticHint", "NONE", darkmagenta, "NONE" ],
+        [ "DiagnosticHint", "NONE", blue, "NONE" ],
         [ "DiagnosticOk", "NONE", "darkgreen", "NONE" ],
 
         # UI
@@ -150,29 +155,29 @@
         [ "@variable.parameter.builtin", "Normal" ], # special parameters (e.g. `_`, `it`)
         [ "@variable.member", "Normal" ], # object and struct fields
 
-        [ "@constant", "Normal" ], # constant identifiers
-        [ "@constant.builtin", "Normal" ], # built-in constant values
-        [ "@constant.macro", "Normal" ], # constants defined by the preprocessor
+        [ "@constant", "Primary" ], # constant identifiers
+        [ "@constant.builtin", "Primary" ], # built-in constant values
+        [ "@constant.macro", "Primary" ], # constants defined by the preprocessor
 
-        [ "@module", "Normal" ], # modules or namespaces
-        [ "@module.builtin", "Normal" ], # built-in modules or namespaces
+        [ "@module", "Module" ], # modules or namespaces
+        [ "@module.builtin", "Module" ], # built-in modules or namespaces
         [ "@label", "Normal" ], # `GOTO` and other labels (e.g. `label:` in C), including heredoc labels
 
-        [ "@string", "Normal" ], # string literals
-        [ "@string.documentation", "Normal" ], # string documenting code (e.g. Python docstrings)
-        [ "@string.regexp", "Normal" ], # regular expressions
-        [ "@string.escape", "Normal" ], # escape sequences
-        [ "@string.special", "Normal" ], # other special strings (e.g. dates)
-        [ "@string.special.symbol", "Normal" ], # symbols or atoms
-        [ "@string.special.path", "Normal" ], # filenames
-        [ "@string.special.url", "Normal" ], # URIs (e.g. hyperlinks)
+        [ "@string", "Primary" ], # string literals
+        [ "@string.documentation", "Comment" ], # string documenting code (e.g. Python docstrings)
+        [ "@string.regexp", "Primary" ], # regular expressions
+        [ "@string.escape", "Primary" ], # escape sequences
+        [ "@string.special", "Primary" ], # other special strings (e.g. dates)
+        [ "@string.special.symbol", "Primary" ], # symbols or atoms
+        [ "@string.special.path", "Primary" ], # filenames
+        [ "@string.special.url", "Primary" ], # URIs (e.g. hyperlinks)
 
         [ "@character", "Normal" ], # character literals
         [ "@character.special", "Normal" ], # special characters (e.g. wildcards)
 
-        [ "@boolean", "Normal" ], # boolean literals
-        [ "@number", "Normal" ], # numeric literals
-        [ "@number.float", "Normal" ], # floating-point number literals
+        [ "@boolean", "Primary" ], # boolean literals
+        [ "@number", "Primary" ], # numeric literals
+        [ "@number.float", "Primary" ], # floating-point number literals
 
         [ "@type", "Normal" ], # type or class definitions and annotations
         [ "@type.builtin", "Normal" ], # built-in types
@@ -226,13 +231,13 @@
         [ "@markup.strikethrough", "Normal" ], # struck-through text
         [ "@markup.underline", "Normal" ], # underlined text (only for literal underline markup!)
 
-        [ "@markup.heading", "Normal" ], # headings, titles (including markers)
-        [ "@markup.heading.1", "Normal" ], # top-level heading
-        [ "@markup.heading.2", "Normal" ], # section heading
-        [ "@markup.heading.3", "Normal" ], # subsection heading
-        [ "@markup.heading.4", "Normal" ], # and so on
-        [ "@markup.heading.5", "Normal" ], # and so forth
-        [ "@markup.heading.6", "Normal" ], # six levels ought to be enough for anybody
+        [ "@markup.heading", "Comment" ], # headings, titles (including markers)
+        [ "@markup.heading.1", "Comment" ], # top-level heading
+        [ "@markup.heading.2", "Comment" ], # section heading
+        [ "@markup.heading.3", "Comment" ], # subsection heading
+        [ "@markup.heading.4", "Comment" ], # and so on
+        [ "@markup.heading.5", "Comment" ], # and so forth
+        [ "@markup.heading.6", "Comment" ], # six levels ought to be enough for anybody
 
         [ "@markup.quote", "Normal" ], # block quotes
         [ "@markup.math", "Normal" ], # math environments (e.g. `$ ... $` in LaTeX)
@@ -252,10 +257,10 @@
         [ "@diff.minus", "Normal" ], # deleted text (for diff files)
         [ "@diff.delta", "Normal" ], # changed text (for diff files)
 
-        [ "@tag", "Normal" ], # XML-style tag names (e.g. in XML, HTML, etc.)
-        [ "@tag.builtin", "Normal" ], # XML-style tag names (e.g. HTML5 tags)
-        [ "@tag.attribute", "Normal" ], # XML-style tag attributes
-        [ "@tag.delimiter", "Normal" ], # XML-style tag delimiters
+        [ "@tag", "NonText" ], # XML-style tag names (e.g. in XML, HTML, etc.)
+        [ "@tag.builtin", "NonText" ], # XML-style tag names (e.g. HTML5 tags)
+        [ "@tag.attribute", "Module" ], # XML-style tag attributes
+        [ "@tag.delimiter", "NonText" ], # XML-style tag delimiters
 
         # NERDTree
         [ "Directory", "Comment" ],
