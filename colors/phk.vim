@@ -2,7 +2,7 @@
 " Author:      Peter Horne-Khan (peter@horne-khan.com)
 " Webpage:     https://github.com/peterhorne/colours
 " Description: Peter Horne-Khan's colour scheme
-" Last Change: 2025-01-23
+" Last Change: 2026-07-13
 
 hi clear
 
@@ -244,6 +244,9 @@ hi! link @tag.attribute Module
 hi! link @tag.delimiter NonText
 hi! link Directory Comment
 hi! link NERDTreeDirSlash Comment
+hi! link HighlightedyankRegion Search
+hi! link TreesitterContext Normal
+hi! link TreesitterContextSeparator NonText
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
     let g:terminal_ansi_colors = [ '#1e1b21', '#bd5945', '#45a569', '#f3b400', '#4179cc', '#766481', '#57b7c5', '#f4f4f4', '#675d4f', '#d17967', '#74aa74', '#f7d17d', '#9aa3bd', '#35323d', '#6bd5e4', '#d2c5b4' ]
