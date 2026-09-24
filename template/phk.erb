@@ -12,14 +12,14 @@
 
     black       = ["#1e1b21", 0, "black"]
     darkred     = ["#bd5945", 1, "darkred"]
-    darkgreen   = ["#45a569", 2, "darkgreen"]
+    darkgreen   = ["#3cba64", 2, "darkgreen"]
     darkyellow  = ["#f3b400", 3, "darkyellow"]
-    darkblue    = ["#4179cc", 4, "darkblue"]
+    darkblue    = ["#55a0fd", 4, "darkblue"]
     darkmagenta = ["#766481", 5, "darkmagenta"]
-    darkcyan    = ["#57b7c5", 6, "darkcyan"]
+    darkcyan    = ["#12b1cd", 6, "darkcyan"]
     grey        = ["#f4f4f4", 7, "grey"]
     darkgrey    = ["#675d4f", 8, "darkgrey"]
-    red         = ["#d17967", 9, "red"]
+    red         = ["#f05846", 9, "red"]
     green       = ["#74aa74", 10, "green"]
     yellow      = ["#f7d17d", 11, "yellow"]
     blue        = ["#9aa3bd", 12, "blue"]
@@ -28,7 +28,7 @@
     white       = ["#d2c5b4", 15, "white"]
     #_orange     = ["#ffd5ae", 16, "orange"]
     #_orange     = ["#e2b293", 16, "orange"]
-    _orange     = ["#c49b81", 16, "orange"]
+    _orange     = ["#bc9e8b", 144, "darkyellow"]
 
     highlights = [
         # Primary Highlights
@@ -39,13 +39,13 @@
         [ "DiagnosticUnderlineError", "NONE", "NONE", "underline", red ],
         [ "Todo", magenta, white, "bold" ],
         [ "Underlined", "NONE", white, "underline" ],
-        [ "Visual", yellow, "NONE", "NONE" ],
         [ "WarningMsg", "NONE", darkyellow, "NONE" ],
-        [ "IncSearch", yellow, black, "bold" ],
-        [ "Search", yellow, black, "NONE" ],
+        [ "Search", magenta, darkyellow, "NONE" ],
+        [ "CurSearch", darkyellow, black, "bold" ],
         [ "SpellBad", "NONE", "NONE", "undercurl", red ],
         [ "MatchParen", black, white, "bold" ],
         [ "CursorLine", "NONE", "NONE", "NONE" ],
+        [ "Cursor", white, black, "NONE" ],
 
         # Made up primary highlights
         [ "CommentBold", "NONE", darkmagenta, "bold" ],
@@ -79,6 +79,7 @@
         [ "CursorLineNr", "Normal" ],
         [ "helpLeadBlank", "Normal" ],
         [ "helpNormal", "Normal" ],
+        [ "Visual", "CurSearch" ],
         [ "VisualNOS", "Normal" ],
         [ "Pmenu", "Normal" ],
         [ "PmenuSbar", "Normal" ],
@@ -92,8 +93,7 @@
         [ "DiffChange", "Normal" ],
         [ "DiffDelete", "Normal" ],
         [ "DiffText", "Normal" ],
-        [ "CurSearch", "Search" ],
-        [ "Directory", "Normal" ],
+        [ "IncSearch", "CurSearch" ],
         [ "SpellCap", "SpellBad" ],
         [ "SpellLocal", "SpellBad" ],
         [ "SpellRare", "SpellBad" ],
@@ -103,8 +103,6 @@
         [ "ModeMsg", "Normal" ],
         [ "MoreMsg", "Normal" ],
         [ "Question", "Normal" ],
-        [ "WarningMsg", "Error" ],
-        [ "Cursor", "Normal" ],
         [ "CursorIM", "Cursor" ],
         [ "CursorColumn", "Normal" ],
         [ "QuickFixLine", "Normal" ],
@@ -132,15 +130,18 @@
         [ "Whitespace", "Normal" ],
         [ "WinBar", "Normal" ],
         [ "WinBarNC", "Normal" ],
-        [ "lCursor", "Normal" ],
-        [ "DiagnosticError", "Error" ],
+        [ "lCursor", "Cursor" ],
 
         # Diagnostics
         [ "DiagnosticError", "NONE", red, "NONE" ],
         [ "DiagnosticWarn", "NONE", darkyellow, "NONE" ],
         [ "DiagnosticInfo", "NONE", darkcyan, "NONE" ],
-        [ "DiagnosticHint", "NONE", blue, "NONE" ],
-        [ "DiagnosticOk", "NONE", "darkgreen", "NONE" ],
+        [ "DiagnosticHint", "NONE", darkblue, "NONE" ],
+        [ "DiagnosticOk", "NONE", darkgreen, "NONE" ],
+        [ "DiagnosticUnderlineWarn", "NONE", "NONE", "underline", darkyellow ],
+        [ "DiagnosticUnderlineInfo", "NONE", "NONE", "underline", darkcyan ],
+        [ "DiagnosticUnderlineHint", "NONE", "NONE", "underline", darkblue ],
+        [ "DiagnosticUnderlineOk", "NONE", "NONE", "underline", darkgreen ],
 
         # UI
         [ "NormalFloat", grey, "NONE", "NONE" ],

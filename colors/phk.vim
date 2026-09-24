@@ -2,7 +2,7 @@
 " Author:      Peter Horne-Khan (peter@horne-khan.com)
 " Webpage:     https://github.com/peterhorne/colours
 " Description: Peter Horne-Khan's colour scheme
-" Last Change: 2026-07-13
+" Last Change: 2026-09-24
 
 hi clear
 
@@ -15,26 +15,30 @@ let colors_name = "phk"
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=0 ctermfg=15 cterm=NONE guibg=#1e1b21 guifg=#d2c5b4 gui=NONE
     hi NonText ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=#675d4f gui=NONE
-    hi Comment ctermbg=0 ctermfg=16 cterm=NONE guibg=#1e1b21 guifg=#c49b81 gui=NONE
-    hi Error ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#d17967 gui=NONE
-    hi DiagnosticUnderlineError ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#d17967
+    hi Comment ctermbg=0 ctermfg=144 cterm=NONE guibg=#1e1b21 guifg=#bc9e8b gui=NONE
+    hi Error ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#f05846 gui=NONE
+    hi DiagnosticUnderlineError ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#f05846
     hi Todo ctermbg=13 ctermfg=15 cterm=bold guibg=#35323d guifg=#d2c5b4 gui=bold
     hi Underlined ctermbg=NONE ctermfg=15 cterm=underline guibg=NONE guifg=#d2c5b4 gui=underline
-    hi Visual ctermbg=11 ctermfg=NONE cterm=NONE guibg=#f7d17d guifg=NONE gui=NONE
     hi WarningMsg ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#f3b400 gui=NONE
-    hi IncSearch ctermbg=11 ctermfg=0 cterm=bold guibg=#f7d17d guifg=#1e1b21 gui=bold
-    hi Search ctermbg=11 ctermfg=0 cterm=NONE guibg=#f7d17d guifg=#1e1b21 gui=NONE
-    hi SpellBad ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl guisp=#d17967
+    hi Search ctermbg=13 ctermfg=3 cterm=NONE guibg=#35323d guifg=#f3b400 gui=NONE
+    hi CurSearch ctermbg=3 ctermfg=0 cterm=bold guibg=#f3b400 guifg=#1e1b21 gui=bold
+    hi SpellBad ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl guisp=#f05846
     hi MatchParen ctermbg=0 ctermfg=15 cterm=bold guibg=#1e1b21 guifg=#d2c5b4 gui=bold
     hi CursorLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    hi Cursor ctermbg=15 ctermfg=0 cterm=NONE guibg=#d2c5b4 guifg=#1e1b21 gui=NONE
     hi CommentBold ctermbg=NONE ctermfg=5 cterm=bold guibg=NONE guifg=#766481 gui=bold
     hi Module ctermbg=NONE ctermfg=5 cterm=NONE guibg=NONE guifg=#766481 gui=NONE
     hi Primary ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#9aa3bd gui=NONE
-    hi DiagnosticError ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#d17967 gui=NONE
+    hi DiagnosticError ctermbg=NONE ctermfg=9 cterm=NONE guibg=NONE guifg=#f05846 gui=NONE
     hi DiagnosticWarn ctermbg=NONE ctermfg=3 cterm=NONE guibg=NONE guifg=#f3b400 gui=NONE
-    hi DiagnosticInfo ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#57b7c5 gui=NONE
-    hi DiagnosticHint ctermbg=NONE ctermfg=12 cterm=NONE guibg=NONE guifg=#9aa3bd gui=NONE
-    hi DiagnosticOk ctermbg=NONE ctermfg=darkgreen cterm=NONE guibg=NONE guifg=darkgreen gui=NONE
+    hi DiagnosticInfo ctermbg=NONE ctermfg=6 cterm=NONE guibg=NONE guifg=#12b1cd gui=NONE
+    hi DiagnosticHint ctermbg=NONE ctermfg=4 cterm=NONE guibg=NONE guifg=#55a0fd gui=NONE
+    hi DiagnosticOk ctermbg=NONE ctermfg=2 cterm=NONE guibg=NONE guifg=#3cba64 gui=NONE
+    hi DiagnosticUnderlineWarn ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#f3b400
+    hi DiagnosticUnderlineInfo ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#12b1cd
+    hi DiagnosticUnderlineHint ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#55a0fd
+    hi DiagnosticUnderlineOk ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#3cba64
     hi NormalFloat ctermbg=7 ctermfg=NONE cterm=NONE guibg=#f4f4f4 guifg=NONE gui=NONE
     hi FloatBorder ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi FloatTitle ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
@@ -45,26 +49,30 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
 
     hi Normal ctermbg=black ctermfg=white cterm=NONE
     hi NonText ctermbg=NONE ctermfg=darkgrey cterm=NONE
-    hi Comment ctermbg=black ctermfg=orange cterm=NONE
+    hi Comment ctermbg=black ctermfg=darkyellow cterm=NONE
     hi Error ctermbg=NONE ctermfg=red cterm=NONE
     hi DiagnosticUnderlineError ctermbg=NONE ctermfg=NONE cterm=underline
     hi Todo ctermbg=magenta ctermfg=white cterm=bold
     hi Underlined ctermbg=NONE ctermfg=white cterm=underline
-    hi Visual ctermbg=yellow ctermfg=NONE cterm=NONE
     hi WarningMsg ctermbg=NONE ctermfg=darkyellow cterm=NONE
-    hi IncSearch ctermbg=yellow ctermfg=black cterm=bold
-    hi Search ctermbg=yellow ctermfg=black cterm=NONE
+    hi Search ctermbg=magenta ctermfg=darkyellow cterm=NONE
+    hi CurSearch ctermbg=darkyellow ctermfg=black cterm=bold
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=undercurl
     hi MatchParen ctermbg=black ctermfg=white cterm=bold
     hi CursorLine ctermbg=NONE ctermfg=NONE cterm=NONE
+    hi Cursor ctermbg=white ctermfg=black cterm=NONE
     hi CommentBold ctermbg=NONE ctermfg=darkmagenta cterm=bold
     hi Module ctermbg=NONE ctermfg=darkmagenta cterm=NONE
     hi Primary ctermbg=NONE ctermfg=blue cterm=NONE
     hi DiagnosticError ctermbg=NONE ctermfg=red cterm=NONE
     hi DiagnosticWarn ctermbg=NONE ctermfg=darkyellow cterm=NONE
     hi DiagnosticInfo ctermbg=NONE ctermfg=darkcyan cterm=NONE
-    hi DiagnosticHint ctermbg=NONE ctermfg=blue cterm=NONE
+    hi DiagnosticHint ctermbg=NONE ctermfg=darkblue cterm=NONE
     hi DiagnosticOk ctermbg=NONE ctermfg=darkgreen cterm=NONE
+    hi DiagnosticUnderlineWarn ctermbg=NONE ctermfg=NONE cterm=underline
+    hi DiagnosticUnderlineInfo ctermbg=NONE ctermfg=NONE cterm=underline
+    hi DiagnosticUnderlineHint ctermbg=NONE ctermfg=NONE cterm=underline
+    hi DiagnosticUnderlineOk ctermbg=NONE ctermfg=NONE cterm=underline
     hi NormalFloat ctermbg=grey ctermfg=NONE cterm=NONE
     hi FloatBorder ctermbg=NONE ctermfg=NONE cterm=NONE
     hi FloatTitle ctermbg=NONE ctermfg=NONE cterm=NONE
@@ -97,6 +105,7 @@ hi! link LineNr NonText
 hi! link CursorLineNr Normal
 hi! link helpLeadBlank Normal
 hi! link helpNormal Normal
+hi! link Visual CurSearch
 hi! link VisualNOS Normal
 hi! link Pmenu Normal
 hi! link PmenuSbar Normal
@@ -110,8 +119,7 @@ hi! link DiffAdd Normal
 hi! link DiffChange Normal
 hi! link DiffDelete Normal
 hi! link DiffText Normal
-hi! link CurSearch Search
-hi! link Directory Normal
+hi! link IncSearch CurSearch
 hi! link SpellCap SpellBad
 hi! link SpellLocal SpellBad
 hi! link SpellRare SpellBad
@@ -121,8 +129,6 @@ hi! link ErrorMsg Error
 hi! link ModeMsg Normal
 hi! link MoreMsg Normal
 hi! link Question Normal
-hi! link WarningMsg Error
-hi! link Cursor Normal
 hi! link CursorIM Cursor
 hi! link CursorColumn Normal
 hi! link QuickFixLine Normal
@@ -150,8 +156,7 @@ hi! link TermCursorNC Normal
 hi! link Whitespace Normal
 hi! link WinBar Normal
 hi! link WinBarNC Normal
-hi! link lCursor Normal
-hi! link DiagnosticError Error
+hi! link lCursor Cursor
 hi! link @variable Normal
 hi! link @variable.builtin Normal
 hi! link @variable.parameter Normal
@@ -249,5 +254,5 @@ hi! link TreesitterContext Normal
 hi! link TreesitterContextSeparator NonText
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-    let g:terminal_ansi_colors = [ '#1e1b21', '#bd5945', '#45a569', '#f3b400', '#4179cc', '#766481', '#57b7c5', '#f4f4f4', '#675d4f', '#d17967', '#74aa74', '#f7d17d', '#9aa3bd', '#35323d', '#6bd5e4', '#d2c5b4' ]
+    let g:terminal_ansi_colors = [ '#1e1b21', '#bd5945', '#3cba64', '#f3b400', '#55a0fd', '#766481', '#12b1cd', '#f4f4f4', '#675d4f', '#f05846', '#74aa74', '#f7d17d', '#9aa3bd', '#35323d', '#6bd5e4', '#d2c5b4' ]
 endif
